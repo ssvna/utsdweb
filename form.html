@@ -12,13 +12,25 @@
       font-family: sans-serif;
       background: #f5f5f5;
     }
+    .Title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo {
+      width: 90px;
+      height: auto;
+    }
     </style>
 
 </head>
 <body>
-    <header role="banner">
-        <nav aria-label="Navigasi utama">
-            <h2 style="text-align: center;">Dreamy Dev's</h2>
+   <header role="banner">
+        <div id="Tittle" class="Title">
+            <img class="logo" src="src/logo.png" alt="Logo Dreamy Dev's">
+            <h2>Dreamy Dev's</h2>
+        </div>
+        <nav id="Navigasi utama">
             <ul style="display: flex; justify-content: center; list-style: none; padding: 10px;">
                 <li style="margin: 0 10px;"><a href="index.html">Beranda</a></li>
                 <li style="margin: 0 10px;"><a href="index.html#services">Layanan</a></li>
@@ -39,18 +51,18 @@
                     <legend>Informasi Pribadi</legend>
 
                     <div>
-                        <label for="name">Nama Lengkap <span aria-label="wajib diisi">*</span></label>
-                        <input type="text" id="name" name="name" required aria-required="true">
+                        <label for="name">Nama Lengkap</label><br>
+                        <input type="text" id="name" name="name" placeholder="Masukan Nama">
                     </div>
 
                     <div>
-                        <label for="email">Email <span aria-label="wajib diisi">*</span></label>
-                        <input type="email" id="email" name="email" required aria-required="true">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="Masukan Email">
                     </div>
 
                     <div>
-                        <label for="phone">Nomor Telepon</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9\-\+\s]+" placeholder="+62 atau 08...">
+                        <label for="phone">Nomor Telepon</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="+62 atau 08...">
                     </div>
                 </fieldset>
 
@@ -58,12 +70,12 @@
                     <legend>Informasi Proyek</legend>
 
                     <div>
-                        <label for="company">Nama Perusahaan / UMKM <span aria-label="wajib diisi">*</span></label>
-                        <input type="text" id="company" name="company" required aria-required="true">
+                        <label for="company">Nama Perusahaan / UMKM</label><br>
+                        <input type="text" id="perusahaan" name="perusahaan" placeholder="Masukan Nama Perusahaan / UMKM">
                     </div>
 
                     <div>
-                        <label for="service-type">Tipe Layanan yang Diinginkan <span aria-label="wajib diisi">*</span></label>
+                        <label for="service-type">Tipe Layanan yang Diinginkan</label><br>
                         <select id="service-type" name="service-type" required aria-required="true">
                             <option value="">-- Pilih Layanan --</option>
                             <option value="website">Pengembangan Website</option>
@@ -74,18 +86,18 @@
                     </div>
 
                     <div>
-                        <label for="budget">Budget Range (IDR)</label>
+                        <label for="budget">Budget Range (IDR)</label><br>
                         <select id="budget" name="budget">
                             <option value="">-- Pilih Range Budget --</option>
-                            <option value="10-50">Rp 10 - 50 Juta</option>
-                            <option value="50-100">Rp 50 - 100 Juta</option>
-                            <option value="100-300">Rp 100 - 300 Juta</option>
-                            <option value="300+">Rp 300 Juta +</option>
+                            <option value="10-50">Rp 1 - 5 Juta</option>
+                            <option value="50-100">Rp 10 - 30 Juta</option>
+                            <option value="100-300">Rp 30 - 50 Juta</option>
+                            <option value="300+">Rp 50 Juta +</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="message">Deskripsi Proyek / Pesan Singkat <span aria-label="wajib diisi">*</span></label>
+                        <label for="message">Deskripsi Proyek / Pesan Singkat</label><br>
                         <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Ceritakan tentang proyek atau kebutuhan Anda..."></textarea>
                     </div>
                 </fieldset>
@@ -94,22 +106,22 @@
                     <legend>Preferensi Komunikasi</legend>
 
                     <div>
-                        <input type="checkbox" id="prefer-email" name="prefer-email" checked>
-                        <label for="prefer-email">Saya lebih suka dihubungi via Email</label>
+                        <input type="checkbox" id="hub-email" name="hub-email" checked>
+                        <label for="hub-email">Saya lebih suka dihubungi via Email</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="prefer-phone" name="prefer-phone">
-                        <label for="prefer-phone">Saya lebih suka dihubungi via WhatsApp / Telepon</label>
+                        <input type="checkbox" id="hub-phone" name="hub-phone">
+                        <label for="hub-phone">Saya lebih suka dihubungi via WhatsApp / Telepon</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="prefer-meeting" name="prefer-meeting">
-                        <label for="prefer-meeting">Saya ingin jadwal meeting/konsultasi</label>
+                        <input type="checkbox" id="hub-meeting" name="hub-meeting">
+                        <label for="hub-meeting">Saya ingin jadwal meeting/konsultasi</label>
                     </div>
                 </fieldset>
 
-                <button type="submit">Kirim Pesan</button>
+                <button type="submit">Pesan Sekarang</button>
                 <button type="reset">Reset</button>
             </form>
         </section>

@@ -12,6 +12,15 @@
       font-family: sans-serif;
       background: #f5f5f5;
     }
+    .Title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo {
+      width: 90px;
+      height: auto;
+    }
 
     main {
       padding: 40px;
@@ -74,9 +83,11 @@
 </head>
 <body>
     <header role="banner">
+        <div id="Tittle" class="Title">
+            <img class="logo" src="src/logo.png" alt="Logo Dreamy Dev's">
+            <h2>Dreamy Dev's</h2>
+        </div>
         <nav id="Navigasi utama">
-            <img src="src/logo.png" alt="Logo Dreamy Dev's" style="height: 50px; position: absolute; top: 10px; left: 280px; transform: translateX(-50%);">
-            <h2 style="text-align: center;">Dreamy Dev's</h2>
             <ul style="display: flex; justify-content: center; list-style: none; padding: 10px;">
                 <li style="margin: 0 10px;"><a href="index.html">Beranda</a></li>
                 <li style="margin: 0 10px;"><a href="index.html#services">Layanan</a></li>
